@@ -1,0 +1,196 @@
+-----------------------------------------------------------------------------
+|| Operation Experiment: FastOp                   ||
+|| Data size: 1000000                                ||
+-----------------------------------------------------------------------------
+
+----1.  Library algorhytm experiments ----
+Without policy(seq default): 26.11410ms
+ Execution policy seq:     26.10120ms
+Execution policy par:    3.91050ms
+Execution policy par_unseq:     3.18210ms
+----2. Experiment within paralel algorhytm ----
+Amount of aparat threads on this CPU: 16
+
+-------------------------------------
+| K | Time of working (ms)       |
+-------------------------------------
+| 1      | 28.1829      |
+| 2      | 13.5796      |
+| 3      | 11.0106      |
+| 4      | 7.1155       |
+| 5      | 6.2344       |
+| 6      | 5.2637       |
+| 7      | 4.6040       |
+| 8      | 4.3765       |
+| 9      | 4.5931       |
+| 10     | 4.4182       |
+| 11     | 4.4667       |
+| 12     | 3.9812       |
+| 13     | 3.6387       |
+| 14     | 3.4867       |
+| 15     | 3.5653       |
+| 16     | 3.6118       |
+| 17     | 4.1796       |
+| 18     | 4.5386       |
+| 19     | 4.1401       |
+| 20     | 4.3508       |
+| 21     | 4.2388       |
+| 22     | 4.4219       |
+| 23     | 4.0150       |
+| 24     | 4.0179       |
+| 25     | 4.1895       |
+| 26     | 3.9221       |
+| 27     | 3.7256       |
+| 28     | 3.7819       |
+| 29     | 3.8279       |
+| 30     | 3.7152       |
+| 31     | 4.1396       |
+ ----------------------------------
+
+----3. Conclusions for that test ----
+The best algorhytm speed is rached if K = 14
+Working time: 3.4867ms
+Comparance K to amount of hardware threads: 14/16=0.8750
+
+ Observations:
+1. For a fast operation, the overhead of creating and synchronizing threads may
+exceed the gain from parallelization. Sometimes the serial version can be faster.
+2. For slow operation advantages of parallelization become evidently. The acceleration is significant3. As K increases beyond the number of hardware threads, execution time typicallyy increases due to the
+overhead of context switching between threads.
+
+-----------------------------------------------------------------------------
+|| Operation Experiment: SlowOp                   ||
+|| Data size: 1000000                                ||
+-----------------------------------------------------------------------------
+
+----1.  Library algorhytm experiments ----
+Without policy(seq default): 1368.03600ms
+ Execution policy seq:     1373.85380ms
+Execution policy par:    119.67370ms
+Execution policy par_unseq:     119.78310ms
+----2. Experiment within paralel algorhytm ----
+Amount of aparat threads on this CPU: 16
+
+-------------------------------------
+| K | Time of working (ms)       |
+-------------------------------------
+| 1      | 1373.9535    |
+| 2      | 705.2737     |
+| 3      | 469.3939     |
+| 4      | 350.9300     |
+| 5      | 305.1459     |
+| 6      | 254.2433     |
+| 7      | 216.7754     |
+| 8      | 204.6148     |
+| 9      | 192.8950     |
+| 10     | 171.8280     |
+| 11     | 160.4184     |
+| 12     | 145.2870     |
+| 13     | 137.7268     |
+| 14     | 137.4142     |
+| 15     | 127.4712     |
+| 16     | 126.7482     |
+| 17     | 136.0508     |
+| 18     | 135.5752     |
+| 19     | 131.1183     |
+| 20     | 124.5229     |
+| 21     | 141.1379     |
+| 22     | 136.7921     |
+| 23     | 124.9455     |
+| 24     | 136.6936     |
+| 25     | 136.4085     |
+| 26     | 135.5458     |
+| 27     | 135.2136     |
+| 28     | 131.9165     |
+| 29     | 127.7824     |
+| 30     | 125.1748     |
+| 31     | 125.8185     |
+ ----------------------------------
+
+----3. Conclusions for that test ----
+The best algorhytm speed is rached if K = 20
+Working time: 124.5229ms
+Comparance K to amount of hardware threads: 20/16=1.2500
+
+ Observations:
+1. For a fast operation, the overhead of creating and synchronizing threads may
+exceed the gain from parallelization. Sometimes the serial version can be faster.
+2. For slow operation advantages of parallelization become evidently. The acceleration is significant3. As K increases beyond the number of hardware threads, execution time typicallyy increases due to the
+overhead of context switching between threads.
+
+-----------------------------------------------------------------------------
+|| Operation Experiment: FastOp                   ||
+|| Data size: 10000000                               ||
+-----------------------------------------------------------------------------
+
+----1.  Library algorhytm experiments ----
+Without policy(seq default): 264.36190ms
+ Execution policy seq:     259.98620ms
+Execution policy par:    30.32410ms
+Execution policy par_unseq:     29.82750ms
+----2. Experiment within paralel algorhytm ----
+Amount of aparat threads on this CPU: 16
+
+-------------------------------------
+| K | Time of working (ms)       |
+-------------------------------------
+| 1      | 260.6090     |
+| 2      | 130.6577     |
+| 3      | 93.8404      |
+| 4      | 71.0161      |
+| 5      | 57.4592      |
+| 6      | 57.3030      |
+| 7      | 48.3363      |
+| 8      | 41.8514      |
+| 9      | 41.2750      |
+| 10     | 37.8609      |
+| 11     | 35.8548      |
+| 12     | 33.0691      |
+| 13     | 30.6566      |
+| 14     | 28.7708      |
+| 15     | 29.1762      |
+| 16     | 39.7037      |
+| 17     | 36.7778      |
+| 18     | 38.1482      |
+| 19     | 33.9604      |
+| 20     | 32.8864      |
+| 21     | 35.6861      |
+| 22     | 35.1653      |
+| 23     | 31.8749      |
+| 24     | 33.0000      |
+| 25     | 30.4746      |
+| 26     | 30.3560      |
+| 27     | 29.8428      |
+| 28     | 28.6099      |
+| 29     | 30.7285      |
+| 30     | 28.5675      |
+| 31     | 28.2111      |
+ ----------------------------------
+
+----3. Conclusions for that test ----
+The best algorhytm speed is rached if K = 31
+Working time: 28.2111ms
+Comparance K to amount of hardware threads: 31/16=1.9375
+
+ Observations:
+1. For a fast operation, the overhead of creating and synchronizing threads may
+exceed the gain from parallelization. Sometimes the serial version can be faster.
+2. For slow operation advantages of parallelization become evidently. The acceleration is significant3. As K increases beyond the number of hardware threads, execution time typicallyy increases due to the
+overhead of context switching between threads.
+
+-----------------------------------------------------------------------------
+|| Operation Experiment: SlowOp                   ||
+|| Data size: 10000000                               ||
+-----------------------------------------------------------------------------
+
+----1.  Library algorhytm experiments ----
+Without policy(seq default): 13738.12640ms
+ Execution policy seq:     13740.36510ms
+Execution policy par:    1181.27950ms
+Execution policy par_unseq:     1178.39460ms
+----2. Experiment within paralel algorhytm ----
+Amount of aparat threads on this CPU: 16
+
+-------------------------------------
+| K | Time of working (ms)       |
+-------------------------------------
